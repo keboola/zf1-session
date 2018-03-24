@@ -21,12 +21,6 @@
  */
 
 /**
- * @see Zend_Session
- */
-require_once 'Zend/Session.php';
-
-
-/**
  * Black box testing for Zend_Session
  *
  * @category   Zend

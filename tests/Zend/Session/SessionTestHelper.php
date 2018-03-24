@@ -20,10 +20,8 @@
  * @version    $Id$
  */
 
-/**
- * @see Zend_Exception
- */
-require_once 'Zend/Exception.php';
+// This is needed for the seprate process tests currently, will look into removing this later
+require_once __DIR__ . '/../../../vendor/diablomedia/zendframework1-exception/src/Zend/Exception.php';
 
 /**
  * @see Zend_Session_Exception
