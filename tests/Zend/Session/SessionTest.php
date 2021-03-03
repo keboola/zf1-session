@@ -65,11 +65,12 @@ class Zend_Session_SessionTest extends PHPUnit\Framework\TestCase
     /**
      * Set up tests environment
      */
-    public function setUp()
+    public function setUp(): void
     {
         // _unitTestEnabled is utilised by other tests to handle session data processing
         // Zend_Session tests should pass with _unitTestEnabled turned off
         Zend_Session::$_unitTestEnabled = false;
+        error_reporting(E_ALL | E_STRICT);
     }
 
     /**
@@ -77,7 +78,7 @@ class Zend_Session_SessionTest extends PHPUnit\Framework\TestCase
      *
      * @return void
      */
-    public function tearDown()
+    public function tearDown(): void
     {
         session_abort();
         session_save_path($this->_savePath);
